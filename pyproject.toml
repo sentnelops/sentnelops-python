@@ -22,8 +22,8 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://platform.sentnelops.com"
-Documentation = "https://github.com/rrb11/sentnelops-python/tree/main/docs"
-Source = "https://github.com/rrb11/sentnelops-python"
+Documentation = "https://github.com/sentnelops/sentnelops-python/tree/main/docs"
+Source = "https://github.com/sentnelops/sentnelops-python"
 
 [project.scripts]
 sentnelops = "sentnelops.cli:main"
