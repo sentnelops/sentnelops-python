@@ -16,7 +16,7 @@ Run it:
 import os
 import sys
 
-from sentnelops import AIRClient, LifecycleError
+from sentnelops import AIRClient, PermissionDeniedError
 
 # Who is doing what. In a real workflow these are two different humans (or a
 # human and a CI identity) — the API rejects self-approval.
@@ -53,7 +53,7 @@ def main() -> int:
         try:
             client.approve(agent_id, approved_by=APPROVER,
                            note="scope reviewed: stripe-mcp only")
-        except LifecycleError as e:
+        except PermissionDeniedError as e:
             print(f"approval rejected ({e.code}): {e}", file=sys.stderr)
             return 1
         print(f"approved by {APPROVER}")
